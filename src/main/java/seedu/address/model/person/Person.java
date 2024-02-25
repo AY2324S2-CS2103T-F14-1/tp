@@ -39,7 +39,9 @@ public class Person {
         this.remark = new Remark("");
     }
 
-    // Constructor for remark
+    /**
+     * Every field must be present and not null. Constructor for Remark.
+     */
     public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags, Remark remark) {
         requireAllNonNull(name, phone, email, address, tags);
         this.name = name;

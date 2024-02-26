@@ -128,6 +128,21 @@ public class ModelManager implements Model {
         filteredPersons.setPredicate(predicate);
     }
 
+    /**
+     * Returns an unmodifiable view of the list of {@code Person} backed by the internal list of
+     * {@code versionedAddressBook}
+     */
+    @Override
+    public Person findPerson(Predicate<Person> predicate) {
+        requireNonNull(predicate);
+        for (Person p : filteredPersons) {
+            if (predicate.test(p)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
     @Override
     public boolean equals(Object other) {
         if (other == this) {

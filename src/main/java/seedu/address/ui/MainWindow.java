@@ -5,7 +5,6 @@ import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextInputControl;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
@@ -52,8 +51,9 @@ public class MainWindow extends UiPart<Stage> {
 
     @FXML
     private StackPane statusbarPlaceholder;
+
     @FXML
-    private ScrollPane viewPanelPlaceHolder;
+    private VBox viewPanelPlaceholder;
 
     /**
      * Creates a {@code MainWindow} with the given {@code Stage} and {@code Logic}.
@@ -178,14 +178,19 @@ public class MainWindow extends UiPart<Stage> {
     //        viewPanelPlaceHolder.getChildren().add(viewPanel.getRoot());
     //    }
 
+    //    private void handleView(Person p) {
+    //        ViewPanel viewPanel = new ViewPanel(p);
+    //        //viewPanelPlaceHolder.getChildren().clear();
+    //        VBox holder = viewPanelPlaceHolder.getContent() == null ? new VBox()
+    //                : (VBox) viewPanelPlaceHolder.getContent();
+    //        holder.getChildren().add(viewPanel.getRoot());
+    //        viewPanelPlaceHolder.setContent(holder);
+    //    }
     private void handleView(Person p) {
         ViewPanel viewPanel = new ViewPanel(p);
-        //viewPanelPlaceHolder.getChildren().clear();
-        VBox holder = viewPanelPlaceHolder.getContent() == null ? new VBox()
-                : (VBox) viewPanelPlaceHolder.getContent();
-        holder.getChildren().add(viewPanel.getRoot());
-        viewPanelPlaceHolder.setContent(holder);
+        viewPanelPlaceholder.getChildren().add(viewPanel.getRoot());
     }
+
 
     public PersonListPanel getPersonListPanel() {
         return personListPanel;
@@ -198,7 +203,8 @@ public class MainWindow extends UiPart<Stage> {
      */
     private CommandResult executeCommand(String commandText) throws CommandException, ParseException {
         try {
-            viewPanelPlaceHolder.setContent(null);
+            // viewPanelPlaceHolder.setContent(null);
+            viewPanelPlaceholder.getChildren().clear();
             CommandResult commandResult = logic.execute(commandText);
             logger.info("Result: " + commandResult.getFeedbackToUser());
             resultDisplay.setFeedbackToUser(commandResult.getFeedbackToUser());
@@ -209,14 +215,10 @@ public class MainWindow extends UiPart<Stage> {
             if (commandResult.getViewPerson() != null) {
                 Person p = commandResult.getViewPerson();
                 handleView(p);
-                //handleView(p, 1);
             }
             if (commandResult.getViewList() != null) {
-                //int index = 1;
                 for (Person p : commandResult.getViewList()) {
                     handleView(p);
-                    //handleView(p, index);
-                    //index++;
                 }
             }
 

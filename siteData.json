@@ -122,9 +122,9 @@
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
-        "finding-the-data": "Finding the data",
-        "filtering-the-data-by-tags": "Filtering the data (by tags)",
-        "sending-reminders": "Sending reminders",
+        "finding-the-data-find": "Finding the data : find",
+        "filtering-the-data-by-tags-filter": "Filtering the data (by tags) : filter",
+        "sending-reminders-reminder": "Sending reminders : reminder",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"

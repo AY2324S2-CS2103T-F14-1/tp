@@ -51,8 +51,9 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
+        "add-command": "Add Command",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
-        "design-considerations": "Design considerations:",
+        "design-considerations-2": "Design considerations:",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
@@ -138,7 +139,7 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "internhub": "InternHub"
       },
       "headingKeywords": {}
     },

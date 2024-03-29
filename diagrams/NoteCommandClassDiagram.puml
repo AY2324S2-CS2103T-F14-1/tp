@@ -1,0 +1,24 @@
+@startuml
+!pragma layout smetana
+
+title NoteCommand Class Diagram
+
+abstract class Command {
+    {abstract} execute(model: Model): CommandResult
+}
+
+class NoteCommand extends Command {
+    +static final COMMAND_WORD: String
+    +static final MESSAGE_USAGE: String
+    -final targetIndex: Index
+    +execute(model: Model): CommandResult
+    +equals(other: Object): boolean
+    +toString(): String
+}
+
+interface Model {
+    -addressbook: AddressBook
+}
+
+NoteCommand --> Model
+@enduml

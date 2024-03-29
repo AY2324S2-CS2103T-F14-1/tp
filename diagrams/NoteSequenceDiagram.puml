@@ -1,0 +1,78 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+actor User
+
+box Ui #LightGreen
+    participant ":CommandBox" as CB #Green
+end box
+
+box Logic LOGIC_COLOR_T1
+    participant ":LogicManager" as LogicManager LOGIC_COLOR
+    participant ":InternHubParser" as AddressBookParser LOGIC_COLOR
+    participant ":NoteCommandParser" as NoteCommandParser LOGIC_COLOR
+    participant "n:NoteCommand" as NoteCommand LOGIC_COLOR
+    participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+    participant "m:Model" as Model MODEL_COLOR
+end box
+
+User -> CB : "note 3"
+activate CB
+
+CB -> LogicManager : execute("note 3")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("note 3")
+activate AddressBookParser
+
+create NoteCommandParser
+AddressBookParser -> NoteCommandParser
+activate NoteCommandParser
+
+create NoteCommand
+NoteCommandParser -> NoteCommand: parse("3")
+activate NoteCommand
+
+NoteCommand --> NoteCommandParser :
+deactivate NoteCommand
+
+NoteCommandParser --> AddressBookParser : n
+deactivate NoteCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+NoteCommandParser -[hidden]-> AddressBookParser
+destroy NoteCommandParser
+
+AddressBookParser --> LogicManager : n
+deactivate AddressBookParser
+
+LogicManager -> NoteCommand : execute(m)
+activate NoteCommand
+
+NoteCommand -> Model : getFilteredPersonList()
+activate Model
+
+Model --> NoteCommand : filteredPersons: ObservableList<Person>
+deactivate Model
+
+create CommandResult
+NoteCommand -> CommandResult: feedbackToUser: "edit 3 n/{existing note content}"
+activate CommandResult
+
+CommandResult --> NoteCommand
+deactivate CommandResult
+
+NoteCommand --> LogicManager
+deactivate NoteCommand
+
+LogicManager --> CB
+deactivate LogicManager
+
+CB --> User : "edit 3 n/{existing note content}"
+deactivate CB
+
+
+@enduml

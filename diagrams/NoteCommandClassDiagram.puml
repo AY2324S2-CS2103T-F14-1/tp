@@ -1,24 +1,46 @@
 @startuml
 !pragma layout smetana
 
+hide empty attributes
+hide empty methods
+hide circle
+
+skinparam shadowing false
+skinparam classFontStyle Bold
+skinparam ActivityBackgroundColor Silver
+skinparam ActivityBorderColor DimGray
+
+skinparam classAttributeIconSize 0
+
+skinparam class {
+    BackgroundColor Cornsilk
+    ArrowColor DimGray
+    BorderThickness 1
+    BorderColor DimGray
+}
+
 title NoteCommand Class Diagram
 
-abstract class Command {
-    {abstract} execute(model: Model): CommandResult
+Interface "Command" as Object\Command <<abstract>> {
+    + execute(model)
 }
 
-class NoteCommand extends Command {
-    +static final COMMAND_WORD: String
-    +static final MESSAGE_USAGE: String
-    -final targetIndex: Index
-    +execute(model: Model): CommandResult
-    +equals(other: Object): boolean
-    +toString(): String
+class "NoteCommand" as Object\NoteCommand {
+     +static final COMMAND_WORD: String
+     +static final MESSAGE_USAGE: String
+     - final targetIndex: Index
+     +execute(model: Model): CommandResult
+     +equals(other: Object): boolean
+     +toString(): String
 }
 
-interface Model {
-    -addressbook: AddressBook
+class "Model" as Object\Model <<interface>> {
+    - addressbook: AddressBook
 }
 
-NoteCommand --> Model
+Object\NoteCommand --> Object\Model
+Object\NoteCommand ...> Object\Person
+Object\NoteCommand --|> Object\Command
+
+
 @enduml

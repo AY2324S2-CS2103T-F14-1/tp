@@ -473,9 +473,9 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("Deleting a person while all pers
 with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#saving-data","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('p',[_v("i. Test case: Deleting name field (the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("key")]),_v(" attribute) from a contact in the InternHub data file.\nExpected: After the app is reboot, the corrupt data file will be detected and all the data in the file will be wiped out, causing the app to run with an empty data file.\nii. Test case: Delete InternHub data file.\nExpected: If the data file is nowhere to be found, the app will simply recreate the data file with empty data.\niii. Test case: Modify the json format in which InternHub data file is stored.\nExpected: If data file is still in the correct format, the app will run as per normal. However, if the data file becomes unreadable by the program, then all the data in the file will be wiped out, causing the app to recreate and run with an empty data file from scratch.")])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Thu, 4 Apr 2024, 23:59:48 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Thu, 4 Apr 2024, 23:59:52 GMT+8]")])])])}
 }];
   

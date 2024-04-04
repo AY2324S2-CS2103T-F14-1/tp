@@ -84,7 +84,7 @@ Our team at InternHub have carefully designed this user guide to be your one-sto
         - Visit the Official [Oracle website](https://www.oracle.com/java/technologies/downloads/#java11) to download jdk-11 & follow the download instructions
         - For **mac** users, download the jdk-11 from [here](https://www.azul.com/downloads/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk-fx#zulu)
 
-2. Download the latest `internhub.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
+2. Download the latest `internhub.jar` from [here](https://github.com/AY2324S2-CS2103T-F14-1/tp/releases).
 
 3. Copy the file to the folder you want to use as the _home folder_ for your InternHub.
     - The home folder will serve as InternHub's central location

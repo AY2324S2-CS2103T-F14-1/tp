@@ -28,8 +28,7 @@ For users who are **new to InternHub**, click [here](#introduction-to-the-user-g
 
 Experienced users can jump straight to exploring our [features](#features) !
 
-<!-- * Table of Contents -->
-<page-nav-print />
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -38,27 +37,29 @@ Experienced users can jump straight to exploring our [features](#features) !
 - [Quick Start](#quick-start)
 - [Getting Familiar with UI](#getting-familiar-with-the-ui-of-internhub)
 - [Features](#features)
-    - [Help](#viewing-help--help)
+    - [Help](#viewing-help-help)
     - [Basic Commands](#basic-commands)
         - [Adding a Contact](#adding-a-contact-add)
-        - [Deleting a Contact](#deleting-a-contact--delete)
-        - [Editing a Contact](#editing-a-contact--edit)
-        - [Viewing a Contact](#viewing-a-contact--view)
+        - [Deleting a Contact](#deleting-a-contact-delete)
+        - [Editing a Contact](#editing-a-contact-edit)
+        - [Viewing a Contact](#viewing-a-contact-view)
     - [Advanced Commands](#advanced-commands)
-        - [Listing all Contacts](#listing-all-contacts--list)
+        - [Listing all Contacts](#listing-all-contacts-list)
         - [Locating Contacts by Name](#locating-contacts-by-name-find)
-        - [Adding a Note](#adding-a-note--note)
-        - [Filter Contacts by Tags](#filtering-the-data-by-tags--filter)
-        - [Sending Reminders](#sending-reminders--reminder)
+        - [Adding a Note](#adding-a-note-note)
+        - [Filter Contacts by Tags](#filtering-the-data-by-tags-filter)
+        - [Sending Reminders](#sending-reminders-reminder)
     - [Miscellaneous Commands](#miscellaneous-commands)
-        - [Clearing all Entries](#clearing-all-entries--clear)
-        - [Exiting the Program](#exiting-the-program--exit)
-    - [Storage & Data](#storage--data)
+        - [Clearing all Entries](#clearing-all-entries-clear)
+        - [Exiting the Program](#exiting-the-program-exit)
+    - [Storage & Data](#storage-and-amp-data)
         - [Saving the Data](#saving-the-data)
         - [Editing the Data](#editing-the-data-file)
 - [FAQ](#faq)
 - [Known Issues](#known-issues)
 - [Command Summary](#command-summary)
+
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 ## Introduction to the User Guide
@@ -115,6 +116,8 @@ Our team at InternHub have carefully designed this user guide to be your one-sto
 
 9. Refer to the [Features](#features) for details of each command.
 
+<div style="page-break-after: always;"></div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Getting familiar with the UI of InternHub
@@ -129,6 +132,8 @@ Our team at InternHub have carefully designed this user guide to be your one-sto
     - The panel displays list of all internship company contacts
 - **View Panel**
     - The panel displays the internship company contact card
+
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -170,6 +175,8 @@ You can also execute this command by using the `F1` key on your keyboard.
 A separate help window will appear.
 
 ![help message](images/UserGuide/helpMessage.png)
+
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -224,6 +231,8 @@ This acknowledges that you might not have immediate information about the interv
 
 </box>
 
+<div style="page-break-after: always;"></div>
+
 **Example 1:**
 
 This example represents an application for a Creative Design Internship position at MediaCorp.
@@ -276,6 +285,7 @@ Examples:
 * `list` followed by `delete 2` deletes the 2nd contact.
 * `find Happy Burger` followed by `delete 1` deletes the 1st contact in the results of the `find` command.
 
+<div style="page-break-after: always;"></div>
 
 ### Editing a contact : `edit`
 
@@ -331,6 +341,8 @@ Format: `View INDEX`
 Example:
 *  `view 3` Displays the company card of the 3rd contact in the list on the view panel.
 ![view result 3](images/view/view3Result.png)
+
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -470,6 +482,8 @@ Exits the program.
 
 Format: `exit`
 
+<div style="page-break-after: always;"></div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Storage & Data
@@ -510,6 +524,8 @@ Furthermore, certain edits can cause the AddressBook to behave in unexpected way
 ## Known issues
 
 1. **When using multiple screens**, if you move the application to a secondary screen, and later switch to using only the primary screen, the GUI will open off-screen. The remedy is to delete the `preferences.json` file created by the application before running the application again.
+
+<div style="page-break-after: always;"></div>
 
 --------------------------------------------------------------------------------------------------------------------
 

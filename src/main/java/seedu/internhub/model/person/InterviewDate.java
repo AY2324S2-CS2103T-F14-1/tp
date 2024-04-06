@@ -3,6 +3,7 @@ package seedu.internhub.model.person;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -10,10 +11,12 @@ import java.time.temporal.ChronoUnit;
  */
 public class InterviewDate {
 
-    public static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd-MM-yyyy HHmm");
+    public static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd-MM-uuuu HHmm")
+            .withResolverStyle(ResolverStyle.STRICT);
     public static final String MESSAGE_CONSTRAINTS =
             "Interview Date & Time needs to follow this pattern : dd-mm-yyyy HHmm\n"
-                    + "Interview Date & Time cannot be before today's date !";
+                    + "Interview Date & Time must follows the date constraint in accordance with the Gregorian Calendar\n"
+                        + "Interview Date & Time cannot be before today's date !";
     public final LocalDateTime value;
     /**
      * Constructs an {@code interview date}.

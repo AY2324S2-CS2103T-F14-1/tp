@@ -14,9 +14,9 @@ public class InterviewDate {
     public static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd-MM-uuuu HHmm")
             .withResolverStyle(ResolverStyle.STRICT);
     public static final String MESSAGE_CONSTRAINTS =
-            "Interview Date & Time needs to follow this pattern : dd-mm-yyyy HHmm\n"
-                    + "Interview Date & Time must follows the date constraint in accordance with the Gregorian Calendar\n"
-                        + "Interview Date & Time cannot be before today's date !";
+            "Interview Date & Time needs to follow the following pattern :\n1. dd-mm-yyyy HHmm\n"
+                + "2. A valid date in accordance with the Gregorian Calendar\n"
+                    + "3. It cannot be before today's date!";
     public final LocalDateTime value;
     /**
      * Constructs an {@code interview date}.

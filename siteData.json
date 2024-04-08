@@ -134,8 +134,8 @@
         "advanced-commands": "Advanced Commands",
         "listing-all-contacts-list": "Listing all contacts : list",
         "locating-contacts-by-name-find": "Locating contacts by name: find",
-        "adding-a-note-note": "Adding a Note : note",
-        "filtering-the-data-by-tags-filter": "Filtering the data (by tags) : filter",
+        "updating-a-note-note": "Updating a Note : note",
+        "filter-by-tag-filter": "Filter By Tag : filter",
         "sending-reminders-reminder": "Sending reminders : reminder",
         "miscellaneous-commands": "Miscellaneous Commands",
         "clearing-all-entries-clear": "Clearing all entries : clear",
@@ -144,8 +144,9 @@
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
         "faq": "FAQ",
-        "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "known-issues": "Known Issues",
+        "command-summary": "Command Summary",
+        "glossary": "Glossary"
       },
       "headingKeywords": {}
     },

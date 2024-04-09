@@ -191,7 +191,7 @@ The Diagram below shows the sequence diagram for AddCommand. All Initialization 
 
 <puml src="diagrams/AddSequenceDiagram.puml" />
 
-<<<<<<< HEAD
+
 ### Filter Command
 
 #### Implementation
@@ -213,21 +213,21 @@ The following steps outline how the Filter Command feature operates:
         - **feedbackToUser** : `[size of filtered list] persons listed~`
         - 
 
-=======
+
 ### Edit Command
 
 #### Implementation
 
 The `EditCommand` allows users to modify the details of an existing person in the address book.
 
-### Command Structure
+#### Command Structure
 
 - **Command Word**: `edit`
 - **Parameters**:
 - `INDEX`: Positive integer representing the index of the person in the displayed list.
 - `[NAME]`, `[PHONE]`, `[EMAIL]`, `[ADDRESS]`, `[JOB DESCRIPTION]`, `[INTERVIEW DATE]`, `[INTERN DURATION]`, `[SALARY]`, `[TAG]`: Optional parameters to specify the new values for corresponding fields. Existing values will be overwritten.
 
-### Execution Steps
+#### Execution Steps
 
 1. Parsing:
 - The input arguments are parsed to extract the index and the new values for the person's details.
@@ -242,14 +242,14 @@ The `EditCommand` allows users to modify the details of an existing person in th
 6. Feedback:
 - A success message is generated to confirm the editing operation.
 
-## Design Considerations
+#### Design Considerations
 
 - **Overwriting vs. Appending**: The command allows overwriting existing details with new ones. This simplifies the implementation and usage of the command.
 - **Error Handling**: The command ensures that at least one field is edited and provides appropriate error messages for invalid inputs.
 
 <puml src="diagrams/EditCommandClassDiagram.puml" width="300" />
 
-### Implementation
+#### Implementation
 
 Suppose we have a person with the following details:
 
@@ -270,7 +270,6 @@ The `EditCommand` will update John Doe's phone number to `87654321` and address 
 Upon successful execution, a message will be displayed confirming the changes made to John Doe's details.
 
 <puml src="diagrams/EditSequenceDiagram.puml" width="600" />
->>>>>>> c141e1a67834236d51441611411e88b3011fc522
 
 ### Note Command
 
@@ -317,6 +316,11 @@ The following steps outline how the Note Command feature operates:
     - Essentially an abstracted & glorified edit feature
 
 <puml src="diagrams/NoteSequenceDiagram.puml" />
+
+
+The following activity diagram summarizes what happens when a user executes a note command:
+
+<puml src="diagrams/NoteActivityDiagram.puml" />
 
 ### \[Proposed\] Undo/redo feature
 
@@ -415,6 +419,16 @@ _{more aspects and alternatives to be added}_
 
 _{Explain here how the data archiving feature will be implemented}_
 
+--------------------------------------------------------------------------------------------------------------------
+
+## **Planned Enhancements**
+
+Team Size : 5
+
+1. **Make date inputs to follow Gregorian Calendar**
+2. 
+
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -434,13 +448,13 @@ _{Explain here how the data archiving feature will be implemented}_
 
 **Target user profile**:
 
-* CS students
-* has a need to keep track of contacts of companies and interview dates during thier internship hunt
+* Undergraduate students
+* has a need to keep track of contacts of companies and interview dates during their internship hunt
 * prefer a one-stop, centralised dashboard to manage all contact details of companies
 * is reasonably comfortable in using a more CLI based app
 * wants to be better organized
 
-**Value proposition**: Ultimate companion for Computer Science (CS) students embarking on their internship journey !
+**Value proposition**: Ultimate companion for Undergraduate students embarking on their internship journey !
 
 ### User stories
 
@@ -464,7 +478,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `InternHub` and the **Actor** is the `user`, unless specified otherwise)
 
 **Use Case: Input Company Contact Information**
 

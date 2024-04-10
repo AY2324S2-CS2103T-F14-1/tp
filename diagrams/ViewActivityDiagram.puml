@@ -1,0 +1,18 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+
+start
+:User executes view command;
+:Retrieve the index from user input;
+if () then ([Valid Index])
+    :Fetch the filtered list of persons from model;
+    :Retrieve the person at the specified index;
+    :Display contact details;
+else ([else])
+    :Display error message for invalid index;
+endif
+stop
+
+@enduml

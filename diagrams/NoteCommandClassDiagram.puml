@@ -39,7 +39,7 @@ class "Model" as Object\Model <<interface>> {
 }
 
 Object\NoteCommand --> Object\Model
-Object\NoteCommand ...> Object\Person
+Object\NoteCommand ...> Person
 Object\NoteCommand --|> Object\Command
 
 

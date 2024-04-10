@@ -69,6 +69,7 @@
         "use-cases": "Use cases",
         "non-functional-requirements": "Non-Functional Requirements",
         "glossary": "Glossary",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
@@ -185,9 +186,9 @@
     },
     {
       "src": "team/jawad.md",
-      "title": "John Doe's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "jawad-afthab": "Jawad Afthab",
+        "internhub-project-portfolio": "InternHub Project Portfolio"
       },
       "headingKeywords": {}
     },

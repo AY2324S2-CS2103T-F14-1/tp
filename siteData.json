@@ -177,7 +177,7 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/ashley.md",
+      "src": "team/ashleygoh1.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-internhub": "Project: InternHub"
@@ -185,7 +185,15 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/eunice.md",
+      "src": "team/chenyixin0.md",
+      "headings": {
+        "chen-yixin": "Chen Yixin",
+        "internhub-project-portfolio": "InternHub Project Portfolio"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/eunrcn.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
@@ -193,7 +201,7 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/jawad.md",
+      "src": "team/jawad280.md",
       "title": "Jawad's Project Portfolio Page",
       "headings": {
         "jawad-afthab": "Jawad Afthab",
@@ -202,18 +210,10 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/minghow.md",
+      "src": "team/minghowc.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "team/yixin.md",
-      "headings": {
-        "chen-yixin": "Chen Yixin",
-        "internhub-project-portfolio": "InternHub Project Portfolio"
       },
       "headingKeywords": {}
     },

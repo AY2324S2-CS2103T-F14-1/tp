@@ -211,9 +211,9 @@
     },
     {
       "src": "team/yixin.md",
-      "title": "John Doe's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "chen-yixin": "Chen Yixin",
+        "internhub-project-portfolio": "InternHub Project Portfolio"
       },
       "headingKeywords": {}
     },

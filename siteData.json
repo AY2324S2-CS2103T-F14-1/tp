@@ -53,6 +53,7 @@
         "implementation": "Implementation",
         "add-command": "Add Command",
         "filter-command": "Filter Command",
+        "reminder-command": "Reminder Command",
         "edit-command": "Edit Command",
         "view-command": "View Command",
         "note-command": "Note Command",

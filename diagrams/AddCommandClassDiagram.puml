@@ -32,10 +32,10 @@ Interface "Command" as Object\Command <<abstract>> {
 
 class "Person" as Object\Person {
     - companyName: Name
-    - phone: Phone Number
+    - phone: Phone
     - email: Email
     - tag: Tag
-    - address: Address;
+    - address: Address
     - jobDescription: JobDescription
     - interviewDate: InterviewDate
     - internDuration: InternDuration

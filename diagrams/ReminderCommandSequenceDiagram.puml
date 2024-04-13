@@ -1,0 +1,72 @@
+@startuml
+
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":InternHubParser" as InternHubParser LOGIC_COLOR
+participant ":ReminderCommandParser" as ReminderCommandParser LOGIC_COLOR
+participant "a:ReminderCommand" as ReminderCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "m:Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute(reminder)
+activate LogicManager
+
+LogicManager -> InternHubParser : parseCommand(reminder)
+activate InternHubParser
+
+create ReminderCommandParser
+InternHubParser -> ReminderCommandParser
+activate ReminderCommandParser
+
+ReminderCommandParser --> InternHubParser
+deactivate ReminderCommandParser
+
+InternHubParser -> ReminderCommandParser : parse(reminder)
+activate ReminderCommandParser
+
+create ReminderCommand
+ReminderCommandParser -> ReminderCommand
+activate ReminderCommand
+
+ReminderCommand --> ReminderCommandParser :
+deactivate ReminderCommand
+
+ReminderCommandParser --> InternHubParser : a
+deactivate ReminderCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+ReminderCommandParser -[hidden]-> InternHubParser
+destroy ReminderCommandParser
+
+InternHubParser --> LogicManager : a
+deactivate InternHubParser
+
+LogicManager -> ReminderCommand : execute(m)
+activate ReminderCommand
+
+ReminderCommand -> Model : updateFilteredPersonList(predicate)
+activate Model
+
+Model --> ReminderCommand
+deactivate Model
+
+create CommandResult
+ReminderCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> ReminderCommand
+deactivate CommandResult
+
+ReminderCommand --> LogicManager : r
+deactivate ReminderCommand
+
+[<--LogicManager
+deactivate LogicManager
+
+@enduml

@@ -57,6 +57,7 @@
         "reminder-command": "Reminder Command",
         "view-command": "View Command",
         "note-command": "Note Command",
+        "4-x-reminder-command": "4.x Reminder Command",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-a-requirements": "Appendix A : Requirements",
         "product-scope": "Product scope",
@@ -194,7 +195,7 @@
     },
     {
       "src": "team/eunrcn.md",
-      "title": "John Doe's Project Portfolio Page",
+      "title": "Eunice's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
       },

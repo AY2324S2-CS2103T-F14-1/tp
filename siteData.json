@@ -231,7 +231,17 @@
       "src": "team/eunrcn.md",
       "title": "Eunice's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "eunice-s-project-portfolio-page": "Eunice's Project Portfolio Page",
+        "project-addressbook-level-3": "Project: AddressBook Level 3",
+        "contributions-overview": "Contributions Overview",
+        "preface": "Preface",
+        "features": "Features",
+        "testings": "Testings",
+        "documentation": "Documentation",
+        "ui": "UI",
+        "project-management": "Project Management",
+        "code-contributed": "Code contributed",
+        "community": "Community"
       },
       "headingKeywords": {}
     },

@@ -1,0 +1,26 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+
+start
+:User executes edit command;
+:Retrieve the index from user input;
+if () then ([Valid prefix])
+    if () then ([Valid input])
+    :Retrieve the person at the specified index;
+    :Edit the field using the input;
+    :Success message displayed to user;
+    :Display contact details;
+    else ([else])
+    :Display error message for invalid input;
+
+endif
+else ([else])
+    :Display error message for invalid command format;
+
+endif
+
+stop
+
+@enduml

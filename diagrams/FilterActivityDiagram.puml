@@ -1,0 +1,18 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+
+start
+:User executes filter command;
+:Retrieve the tag from user input;
+if () then ([Valid tag])
+    :Fetch the filtered list of persons from model;
+    :Success message displayed to user;
+    :Display contact details;
+else ([else])
+    :Display error message for invalid command format;
+endif
+stop
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+
+start
+:User executes add command;
+:Retrieve the inputs from user input;
+if () then ([Missing parameters or prefix])
+    :Display error message for invalid command format;
+else ([else])
+    if () then ([Invalid input])
+        :Display error message for invalid input;
+    else ([else])
+        :Parser create new Person;
+        :Success message displayed to user;
+        :Display contact details;
+endif
+endif
+stop
+
+@enduml

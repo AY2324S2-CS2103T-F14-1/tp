@@ -1,0 +1,72 @@
+@startuml
+
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":InternHubParser" as InternHubParser LOGIC_COLOR
+participant ":FilterCommandParser" as FilterCommandParser LOGIC_COLOR
+participant "a:FilterCommand" as FilterCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "m:Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("filter NR")
+activate LogicManager
+
+LogicManager -> InternHubParser : parseCommand("filter NR")
+activate InternHubParser
+
+create FilterCommandParser
+InternHubParser -> FilterCommandParser
+activate FilterCommandParser
+
+FilterCommandParser --> InternHubParser
+deactivate FilterCommandParser
+
+InternHubParser -> FilterCommandParser : parse("filter NR")
+activate FilterCommandParser
+
+create FilterCommand
+FilterCommandParser -> FilterCommand
+activate FilterCommand
+
+FilterCommand --> FilterCommandParser :
+deactivate FilterCommand
+
+FilterCommandParser --> InternHubParser : a
+deactivate FilterCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+FilterCommandParser -[hidden]-> InternHubParser
+destroy FilterCommandParser
+
+InternHubParser --> LogicManager : a
+deactivate InternHubParser
+
+LogicManager -> FilterCommand : execute(m)
+activate FilterCommand
+
+FilterCommand -> Model : updateFilteredPersonList(predicate)
+activate Model
+
+Model --> FilterCommand
+deactivate Model
+
+create CommandResult
+FilterCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> FilterCommand
+deactivate CommandResult
+
+FilterCommand --> LogicManager : r
+deactivate FilterCommand
+
+[<--LogicManager
+deactivate LogicManager
+
+@enduml

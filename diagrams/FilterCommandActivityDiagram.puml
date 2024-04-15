@@ -4,13 +4,12 @@ skinparam ActivityFontSize 15
 skinparam ArrowFontSize 12
 
 start
-:User executes filter command;
-:Retrieve tag from user input;
+:User executes FilterCommand;
+:Retrieve the specified tag from user input;
 if () then ([Valid tag])
-    :Update filtered list to contain entries with matching tag;
+    :Update filtered list with entries with matching tag;
     :Display success message;
-    :Display contact details;
-else ([else])
+else ([Invalid tag])
     :Display error message for invalid command format;
 endif
 stop

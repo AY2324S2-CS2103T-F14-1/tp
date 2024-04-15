@@ -45,10 +45,11 @@ deactivate AddressBookParser
 LogicManager -> FilterCommand : execute(m)
 activate FilterCommand
 
-FilterCommand -> Model : getFilteredPersonList()
+FilterCommand -> Model : updateFilteredPersonList(tagPredicate)
 activate Model
 
-Model --> FilterCommand : filteredPersons: ObservableList<Person>
+'Model --> FilterCommand : filteredPersons: ObservableList<Person>
+Model --> FilterCommand
 deactivate Model
 
 create CommandResult

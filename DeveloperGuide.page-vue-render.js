@@ -608,6 +608,6 @@ with(this){return _c('h2',{attrs:{"id":"9-4-achievements-of-project"}},[_v("9.4 
 with(this){return _c('ul',[_c('li',[_v("Able to meet initially planned features with almost full functionality with minor bugs.")]),_v(" "),_c('li',[_v("Effectively delivers a solution for the target audience.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 20:15:41 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 20:28:06 GMT+8]")])])])}
 }];
   

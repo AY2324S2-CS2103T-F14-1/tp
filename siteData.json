@@ -221,6 +221,7 @@
     },
     {
       "src": "team/chenyixin0.md",
+      "title": "Yixin's Project Portfolio Page",
       "headings": {
         "chen-yixin": "Chen Yixin",
         "internhub-project-portfolio": "InternHub Project Portfolio"
@@ -232,7 +233,6 @@
       "title": "Eunice's Project Portfolio Page",
       "headings": {
         "eunice-s-project-portfolio-page": "Eunice's Project Portfolio Page",
-        "project-addressbook-level-3": "Project: AddressBook Level 3",
         "preface": "Preface",
         "contributions-overview": "Contributions Overview",
         "features": "Features",
